@@ -15,8 +15,6 @@ const firebaseConfig = {
 
 const mapUserFromFirebaseAuthToUser = (user) => {
   const { displayName, email, photoURL } = user;
-  // const {username, profile} = additionalUserInfo
-  // const {avatar_url,blog} = profile
   return {
     avatar: photoURL,
     username: displayName,
@@ -26,7 +24,7 @@ const mapUserFromFirebaseAuthToUser = (user) => {
 
 export const onAuthStateChanged = (onChange) => {
   return firebase.auth().onAuthStateChanged((user) => {
-    const normalizedUser = mapUserFromFirebaseAuthToUser(user);
+    const normalizedUser = user ? mapUserFromFirebaseAuthToUser(user) : null;
     onChange(normalizedUser);
   });
 };
