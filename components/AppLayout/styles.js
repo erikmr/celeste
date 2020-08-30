@@ -14,10 +14,15 @@ export const globalStyles = css.global`
     background-size: 50px 50px;
     padding: 0;
     margin: 0;
+    overflow: hidden;
     font-family: ${fonts.base};
   }
   * {
     box-sizing: border-box;
+  }
+  textarea,
+  input {
+    font-family: ${fonts.base};
   }
 `;
 
@@ -34,6 +39,7 @@ export default css`
     height: 100%;
     position: relative;
     width: 100%;
+    overflow-y: auto;
   }
   @media (min-width: ${breakpoints.mobile}) {
     main {

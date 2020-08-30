@@ -1,28 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
 
 import AppLayout from "components/AppLayout";
 import { colors } from "styles/theme";
 import Button from "components/Button";
 import GitHub from "components/Icons/GitHub";
-import { loginWithGithub, onAuthStateChanged } from "firebase/client";
-import Avatar from "components/Avatar";
+import { loginWithGithub } from "firebase/client";
+import { useRouter } from "next/router";
+import UseUser, { USER_STATES } from "hooks/useUser";
 
 export default function Home() {
-  const [user, setUser] = useState(undefined);
-  console.log(user);
-  useEffect(() => {
-    onAuthStateChanged(setUser);
-  }, []);
+  const user = UseUser();
 
+  const router = useRouter();
+
+  useEffect(() => {
+    user && router.replace("/home");
+  }, [user])
+
+  console.log(user);
   const handleClick = () => {
-    loginWithGithub()
-      .then((user) => {
-        setUser(user);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    loginWithGithub().catch((err) => {
+      console.log(err);
+    });
   };
   return (
     <>
@@ -35,26 +35,20 @@ export default function Home() {
           <img src="/celeste-logo.png" alt="Logo" />
           <h1>Celeste</h1>
           <h2>
-            Talk about development
+            Asistente virtual
             <br />
-            with developers 👩‍💻👨‍💻
+            para agentes de seguros 👩‍💻👨‍💻
           </h2>
 
           <div>
-            {user === null && (
+            {user === USER_STATES.NOT_LOGGED && (
               <Button onClick={handleClick}>
                 <GitHub fill="#fff" width={24} height={24} />
-                Login with GitHub
+                Login con GitHub
               </Button>
             )}
 
-            {user && user.avatar && (
-              <Avatar
-                src={user.avatar}
-                alt={user.username}
-                text={user.username}
-              />
-            )}
+            {user === USER_STATES.NOT_KNOWN && <img src="/spinner.gif"></img>}
           </div>
         </section>
       </AppLayout>
