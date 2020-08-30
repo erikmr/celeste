@@ -1,9 +1,9 @@
-import css from "styled-jsx/css";
+import css from 'styled-jsx/css'
 
-import { breakpoints, colors, fonts } from "../../styles/theme";
-import { addOpacityToColor } from "../../styles/utils";
+import { breakpoints, colors, fonts } from '../../styles/theme'
+import { addOpacityToColor } from '../../styles/utils'
 
-const backgroundColor = addOpacityToColor(colors.primary, 0.3);
+const backgroundColor = addOpacityToColor(colors.primary, 0.3)
 
 export const globalStyles = css.global`
   html,
@@ -24,7 +24,7 @@ export const globalStyles = css.global`
   input {
     font-family: ${fonts.base};
   }
-`;
+`
 
 export default css`
   div {
@@ -36,10 +36,12 @@ export default css`
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    overflow-y: auto;
     position: relative;
     width: 100%;
-    overflow-y: auto;
   }
   @media (min-width: ${breakpoints.mobile}) {
     main {
@@ -47,4 +49,4 @@ export default css`
       width: ${breakpoints.mobile};
     }
   }
-`;
+`
