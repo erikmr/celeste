@@ -19,47 +19,46 @@ export default function HomePage() {
 
   return (
     <>
-      <AppLayout>
-        <Head>
-          <title>Inicio</title>
-        </Head>
-        <header>
-          <h2>Inicio</h2>
-        </header>
-        <section>
-          {timeline.map(
-            ({ id, userName, avatar, img, content, userId, createdAt }) => (
-              <Devit
-                avatar={avatar}
-                id={id}
-                key={id}
-                img={img}
-                content={content}
-                userName={userName}
-                userId={userId}
-                createdAt={createdAt}
-              />
-            )
-          )}
-        </section>
-        <nav>
-          <Link href="/home">
-            <a>
-              <Home width={32} heigth={32} stroke="#09f" />
-            </a>
-          </Link>
-          <Link href="/home">
-            <a>
-              <Search width={32} heigth={32} stroke="#09f" />
-            </a>
-          </Link>
-          <Link href="/compose/tweet">
-            <a>
-              <Create width={32} heigth={32} stroke="#09f" />
-            </a>
-          </Link>
-        </nav>
-      </AppLayout>
+      <Head>
+        <title>Inicio</title>
+      </Head>
+      <header>
+        <h2>Inicio</h2>
+      </header>
+      <section>
+        {timeline.map(
+          ({ id, userName, avatar, img, content, userId, createdAt }) => (
+            <Devit
+              avatar={avatar}
+              id={id}
+              key={id}
+              img={img}
+              content={content}
+              userName={userName}
+              userId={userId}
+              createdAt={createdAt}
+            />
+          )
+        )}
+      </section>
+      <nav>
+        <Link href="/home">
+          <a>
+            <Home width={32} heigth={32} stroke="#09f" />
+          </a>
+        </Link>
+        <Link href="/home">
+          <a>
+            <Search width={32} heigth={32} stroke="#09f" />
+          </a>
+        </Link>
+        <Link href="/compose/tweet">
+          <a>
+            <Create width={32} heigth={32} stroke="#09f" />
+          </a>
+        </Link>
+      </nav>
+
       <style jsx>{`
         header {
           align-items: center;

@@ -8,7 +8,6 @@ const DATE_UNITS = [
 ]
 
 const getDateDiffs = (timestamp) => {
-  //console.log('getDateDiffs')
   const now = Date.now()
   const elapsed = (timestamp - now) / 1000
 
@@ -27,7 +26,7 @@ export default function useTimeAgo(timestamp) {
     const interval = setInterval(() => {
       const newTimeAgo = getDateDiffs(timestamp)
       setTimeago(newTimeAgo)
-    }, 50000)
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [timestamp])

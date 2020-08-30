@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "celeste-app-mx",
+  "private_key_id": "7f29a9999166a94f5e563e725a7d5d2d4e78be06",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDdc2T/Ts/YkeP9\n2SWoh2Y6xfJt51z74+RLoAtd4kjYfahfq5InM8+ywQnG7XFHFm3De2247aR11nFw\n32dnMAajjPHVJYVgHaBDixR+ujlffir7wfdCTGpdUyb9dsAsT2GYyZpYkwjQK1S1\no/cDUts0GNueJzLnaz5SvN+rPOZMIXK2A3HdKr4sQTvRinE5H0K5YvWoB60drccg\nrHs79lJrq0oVlz9sYByZW0aWzsxSj1+fovl7QFlNSOtPD1larZg3G5zfOCAPrlq8\n75qXca79GVE2NXULKa6vZJdLRUx3gVsg7V852SPvxufCshn5PThcK8WlQHKz0Rg9\nxXEvhdIJAgMBAAECggEAJhOTz5Q5B6daGMkwAPC7AqsLeps38TWniNtNaQih9ttw\nSnbhK+1sLnOjnzkva4YvPFfqL0xpJTvIiJxZFrR6x79Ry5DmhHbDmil9Tibt+33h\nnSUmQxeJiF9mSlmTRGsnwFIVwFoTv1tb9tlo/QDPoP8PL/vUdFcLwcUo/jP78yXR\nKhBustz8RTwLXcp6qH7qlsUlXabQEXPn0WMgQzw6+ztJnTqG/hRwuQKyQea9lj62\n89Ma0W1gZWzw9367r99rHYYFEXJ06cZ+p1ifi+4BNAaa70sJy7/UKX+ov474OU29\nbuid/wzX3ar1WPEJIyMoms3Km2zg7ZFTjhck6muyWwKBgQD66NpJmZ9kn8VSYk8r\nYPn8UFk1Xsg7AME/CC/xT29DO5+enNrAMVb/ck9/vHxLngmgqveKFzhTsk6bFZh+\n6kvmvBmdw82CgayqRqPt4OV9U5NMm2zUWOiq3VUcwEBljkmi9dCcpoXRVbo7Yq51\nGQZez9uc3FBt41RcdD+pPHh19wKBgQDh8YqxH3ayJ/XQvlnl6tRijc1aCT8iUhXL\nBzXnjHyPAEkr5bCH5SmPWL5wHM6ft0DNldqeGT/9/9DyLC5SQJpUfCEYe+w8v0jS\nU8H1mmvc7DHEuS5nOV4bitH8fHaT0wi+gN9VDBlb7WUr9nTwGmxEIaF+E1E40Uyf\n/k3E6kH3/wKBgQCOBsqxSLUx90JxrNZVnrJCwZSNolZDF91Lea3xsV4wt4pV9UHZ\n8tPlCua3TpEpGI8olD5Eu3oV3mOiY6oLhUJrnGP/qrskuZRsWkomt9wPggRqI7yJ\nwr4JIfowqR6Kne1OwkhQs+4hnZ4qSWSpQf4aIxyUAR3B5iF1qBP1Dxa85wKBgC6N\ndNT/tZYJc7VZsu4TT0UrEFdvtklc/k6BotKdeICCP5FC1vd4+PInB73TwaLYwApb\nyNpwO2YbEjMDdVvPIb0sgikoR0lQ5DEpvrna4kR3id2NhgkQodos5Q0Pm+LjRVby\n+JDuWD8/j2vacMeTuiDjiQGP+1kojpAcdmuPFJ6DAoGAF77th1u9Aukc0FRKcosF\nJF0GIuvhX+E8qO80zkk7otpNe90vRbQK209IEuAp5eJedQNYjsPaojqXrACvOr44\npSZrOjTxV4a+MNoabVo1G1cXXmfCZkRxI2ebszhBxTHff7Sk2mXF/X5meKFqjc74\nqrGN5py3llHlvFtwHw9iPPs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-3gyrf@celeste-app-mx.iam.gserviceaccount.com",
+  "client_id": "113903252252437731788",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-3gyrf%40celeste-app-mx.iam.gserviceaccount.com"
+}

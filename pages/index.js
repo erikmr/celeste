@@ -1,57 +1,53 @@
-import { useEffect } from "react";
-import Head from "next/head";
-
-import AppLayout from "components/AppLayout";
-import { colors } from "styles/theme";
-import Button from "components/Button";
-import GitHub from "components/Icons/GitHub";
-import { loginWithGithub } from "firebase/client";
-import { useRouter } from "next/router";
-import UseUser, { USER_STATES } from "hooks/useUser";
+import { useEffect } from 'react'
+import Head from 'next/head'
+import { colors } from 'styles/theme'
+import Button from 'components/Button'
+import GitHub from 'components/Icons/GitHub'
+import { loginWithGithub } from 'firebase/client'
+import { useRouter } from 'next/router'
+import UseUser, { USER_STATES } from 'hooks/useUser'
 
 export default function Home() {
-  const user = UseUser();
+  const user = UseUser()
 
-  const router = useRouter();
+  const router = useRouter()
 
   useEffect(() => {
-    user && router.replace("/home");
+    user && router.replace('/home')
   }, [user])
 
-  console.log(user);
+  console.log(user)
   const handleClick = () => {
     loginWithGithub().catch((err) => {
-      console.log(err);
-    });
-  };
+      console.log(err)
+    })
+  }
   return (
     <>
       <Head>
         <title> Create Next App </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AppLayout>
-        <section>
-          <img src="/celeste-logo.png" alt="Logo" />
-          <h1>Celeste</h1>
-          <h2>
-            Asistente virtual
-            <br />
-            para agentes de seguros 👩‍💻👨‍💻
-          </h2>
+      <section>
+        <img src="/celeste-logo.png" alt="Logo" />
+        <h1>Celeste</h1>
+        <h2>
+          Asistente virtual
+          <br />
+          para agentes de seguros 👩‍💻👨‍💻
+        </h2>
 
-          <div>
-            {user === USER_STATES.NOT_LOGGED && (
-              <Button onClick={handleClick}>
-                <GitHub fill="#fff" width={24} height={24} />
-                Login con GitHub
-              </Button>
-            )}
+        <div>
+          {user === USER_STATES.NOT_LOGGED && (
+            <Button onClick={handleClick}>
+              <GitHub fill="#fff" width={24} height={24} />
+              Login con GitHub
+            </Button>
+          )}
 
-            {user === USER_STATES.NOT_KNOWN && <img src="/spinner.gif"></img>}
-          </div>
-        </section>
-      </AppLayout>
+          {user === USER_STATES.NOT_KNOWN && <img src="/spinner.gif"></img>}
+        </div>
+      </section>
       <style jsx>{`
         img {
           width: 120px;
@@ -77,5 +73,5 @@ export default function Home() {
         }
       `}</style>
     </>
-  );
+  )
 }
