@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-
+import { colors } from '../../../styles/theme'
 import Button from 'components/Button'
 import useUser from 'hooks/useUser'
 
@@ -120,7 +120,9 @@ export default function ComposeTweet() {
             </section>
           )}
           <div>
-            <Button disabled={isButtonDisabled}>Devitear</Button>
+            <Button disabled={isButtonDisabled} color={colors.primary}>
+              Devitear
+            </Button>
           </div>
         </form>
       </section>

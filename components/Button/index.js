@@ -1,5 +1,6 @@
 import { colors } from '../../styles/theme'
 export default function Button({ children, disabled, onClick, width, color }) {
+  if (!color) color = colors.black
   return (
     <>
       <button disabled={disabled} onClick={onClick}>
