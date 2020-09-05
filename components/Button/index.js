@@ -1,5 +1,5 @@
 import { colors } from '../../styles/theme'
-export default function Button({ children, disabled, onClick }) {
+export default function Button({ children, disabled, onClick, width, color }) {
   return (
     <>
       <button disabled={disabled} onClick={onClick}>
@@ -8,7 +8,7 @@ export default function Button({ children, disabled, onClick }) {
       <style jsx>{`
         button {
           align-items: center;
-          background: ${colors.black};
+          background: ${color};
           border-radius: 9999px;
           border: 0;
           color: #fff;
@@ -19,6 +19,8 @@ export default function Button({ children, disabled, onClick }) {
           padding: 8px 24px;
           transition: opacity 0.3s ease;
           user-select: none;
+          margin-bottom: 10px;
+          width: ${width};
         }
         button[disabled] {
           pointer-events: none;

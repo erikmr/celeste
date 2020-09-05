@@ -35,7 +35,10 @@ export const loginWithGithub = () => {
   const githubProvider = new firebase.auth.GithubAuthProvider()
   return firebase.auth().signInWithPopup(githubProvider)
 }
-
+export const loginWithFacebook = () => {
+  const facebookAuthProvider = new firebase.auth.FacebookAuthProvider()
+  return firebase.auth().signInWithPopup(facebookAuthProvider)
+}
 export const addDevit = ({ avatar, content, userId, userName, img }) => {
   return db.collection('devits').add({
     avatar,

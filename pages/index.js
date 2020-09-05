@@ -3,9 +3,10 @@ import Head from 'next/head'
 import { colors } from 'styles/theme'
 import Button from 'components/Button'
 import GitHub from 'components/Icons/GitHub'
-import { loginWithGithub } from 'firebase/client'
+import { loginWithGithub, loginWithFacebook } from 'firebase/client'
 import { useRouter } from 'next/router'
 import UseUser, { USER_STATES } from 'hooks/useUser'
+import Facebook from 'components/Icons/Facebook'
 
 export default function Home() {
   const user = UseUser()
@@ -17,8 +18,13 @@ export default function Home() {
   }, [user])
 
   console.log(user)
-  const handleClick = () => {
+  const handleClickloginWithGithub = () => {
     loginWithGithub().catch((err) => {
+      console.log(err)
+    })
+  }
+  const handleClickloginWithFaceBook = () => {
+    loginWithFacebook().catch((err) => {
       console.log(err)
     })
   }
@@ -39,9 +45,23 @@ export default function Home() {
 
         <div>
           {user === USER_STATES.NOT_LOGGED && (
-            <Button onClick={handleClick}>
+            <Button
+              onClick={handleClickloginWithGithub}
+              width="200px"
+              color="#000"
+            >
               <GitHub fill="#fff" width={24} height={24} />
-              Login con GitHub
+              GitHub
+            </Button>
+          )}
+          {user === USER_STATES.NOT_LOGGED && (
+            <Button
+              onClick={handleClickloginWithFaceBook}
+              width="200px"
+              color="#3b5998"
+            >
+              <Facebook fill="#fff" width={24} height={24} />
+              Faccebook
             </Button>
           )}
 

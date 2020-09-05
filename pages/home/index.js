@@ -1,4 +1,3 @@
-import AppLayout from 'components/AppLayout'
 import { useEffect, useState } from 'react'
 import Devit from 'components/Devit'
 import useUser from 'hooks/useUser'
