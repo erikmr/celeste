@@ -1,5 +1,5 @@
 import * as firebase from 'firebase'
-console.log(process.env.NEXT_PUBLIC_FIREBASE_CONFIG)
+//console.log(process.env.NEXT_PUBLIC_FIREBASE_CONFIG)
 // const firebaseConfig = {
 //   apiKey: 'AIzaSyDIeCRd_pYR-oXw2O2p2olsYs8uIqaISgY',
 //   authDomain: 'celeste-app-mx.firebaseapp.com',
