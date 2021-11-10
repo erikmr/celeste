@@ -1,4 +1,6 @@
 var admin = require('firebase-admin')
+console.log('process.env en archivo admin')
+console.log(process.env.NEXT_PUBLIC_FIREBASE_ENV)
 
 const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT
 

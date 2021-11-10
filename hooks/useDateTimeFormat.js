@@ -21,7 +21,6 @@ export const formatDate = (timestamp, { language = DEFAULT_LANGUAGE } = {}) => {
     minute: 'numeric',
     second: 'numeric',
   }
-
   return new Intl.DateTimeFormat(language, options).format(date)
 }
 

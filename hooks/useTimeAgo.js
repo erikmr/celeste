@@ -39,6 +39,7 @@ export default function useTimeAgo(timestamp) {
     return formatDate(timestamp)
   }
   const rtf = new Intl.RelativeTimeFormat('es', { style: 'short' })
+  //console.log(timeago)
   const { value, unit } = timeago
   return rtf.format(value, unit)
 }

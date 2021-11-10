@@ -10,13 +10,10 @@ import Facebook from 'components/Icons/Facebook'
 
 export default function Home() {
   const user = UseUser()
-
   const router = useRouter()
-
   useEffect(() => {
     user && router.replace('/home')
   }, [user])
-
   console.log(user)
   const handleClickloginWithGithub = () => {
     loginWithGithub().catch((err) => {

@@ -50,6 +50,7 @@ export default function DevitPage(props) {
 export async function getServerSideProps(context) {
   const { params } = context
   const { id } = params
+  console.log(id)
   console.log('getServerSideProps')
   return firestore
     .collection('devits')
@@ -57,6 +58,8 @@ export async function getServerSideProps(context) {
     .get()
     .then((doc) => {
       const data = doc.data()
+      console.log('doc')
+      console.log(doc.data())
       const id = doc.id
       const { createdAt } = data
 

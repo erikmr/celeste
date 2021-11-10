@@ -75,12 +75,13 @@ export default function HomePage() {
           width: 100%;
         }
         h2 {
+          margin-left: 20px;
           font-size: 21px;
           font-weight: 800;
         }
         section {
           flex: 1;
-          padding-top: 49px;
+          padding-top: 10px;
         }
         nav {
           background: #ffffff;

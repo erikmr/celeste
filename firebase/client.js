@@ -10,7 +10,8 @@ import * as firebase from 'firebase'
 //   appId: '1:884988565806:web:b95442cf42533ed36e42bf',
 //   measurementId: 'G-765SXYRF5W',
 // }
-
+console.log('process.env en archivo client')
+console.log(process.env.NEXT_PUBLIC_FIREBASE_ENV)
 !firebase.apps.length &&
   firebase.initializeApp(JSON.parse(process.env.NEXT_PUBLIC_FIREBASE_CONFIG))
 
